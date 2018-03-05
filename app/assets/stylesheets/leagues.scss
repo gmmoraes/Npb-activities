@@ -1,0 +1,311 @@
+// Place all the styles related to the Leagues controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.block{
+  display:flex;
+  width:100vw;
+  height:100vh;
+  text-align:center;
+}
+
+
+#left-p {
+  flex:1;
+  //background:#108F2D;
+  background-color: #108F2D;
+}
+
+#left-p:hover{
+  -webkit-filter: blur(5px);
+  -moz-filter: all .25s ease;
+  -o-filter: all .25s ease;
+  -ms-filter: all .25s ease;
+  filter: blur(5px);
+}
+
+#left-p div{
+  background-color: white;
+  margin-top: 50px;
+  padding: 5.7% 10px 105px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+  
+  -webkit-transform: skewY(-10deg);
+  -moz-transform: skewY(-10deg);
+  -ms-transform: skewY(-10deg);
+  -o-transform: skewY(-10deg);
+  transform: skewY(-10deg);
+
+}
+
+
+
+
+#left-p div .leagueTitle{
+  //font-family: "Oswald", "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+  //font-size: 56px;
+  -webkit-transform: skewY(10deg);
+  -moz-transform: skewY(10deg);
+  -ms-transform: skewY(10deg);
+  -o-transform: skewY(10deg);
+  transform: skewY(10deg);
+
+  background-image: url("http://oi65.tinypic.com/16bhhr9.jpg");
+  background-repeat: no-repeat;
+  background-size: 66%;
+  background-position: center center;
+}
+
+#left-p div .leageImage{
+  background-image: url("https://i0.wp.com/tokyoswallows.com/wp-content/uploads/2011/12/Central-League-logo.gif?ssl=1");
+  background-repeat: no-repeat;
+  background-size: 17%;
+  background-position: center center;
+  
+  -webkit-transform: skewY(10deg);
+  -moz-transform: skewY(10deg);
+  -ms-transform: skewY(10deg);
+  -o-transform: skewY(10deg);  
+  transform: skewY(10deg);
+}
+
+
+
+#right-p{
+  flex:1;
+  background:#40B2E3;
+}
+
+#right-p:hover{
+  -webkit-filter: blur(5px);
+  -moz-filter: all .25s ease;
+  -o-filter: all .25s ease;
+  -ms-filter: all .25s ease;
+  filter: blur(5px);
+}
+
+
+#right-p div{
+  background-color: white;
+  margin-top: 50px;
+  padding: 5.7% 10px 105px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+  
+  -webkit-transform: skewY(10deg);
+  -moz-transform: skewY(10deg);
+  -ms-transform: skewY(10deg);
+  -o-transform: skewY(10deg);
+  transform: skewY(10deg);
+
+}
+
+
+
+
+#right-p div .leagueTitle{
+  //font-family: "Oswald", "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+  //font-size: 56px;
+  -webkit-transform: skewY(-10deg);
+  -moz-transform: skewY(-10deg);
+  -ms-transform: skewY(-10deg);
+  -o-transform: skewY(-10deg);
+  transform: skewY(-10deg);
+
+  background-image: url("https://i.imgur.com/2NBKq73.png");
+  background-repeat: no-repeat;
+  background-size: 62%;
+  background-position: center center;
+}
+
+#right-p div .leageImage{
+  background-image: url("https://i.imgur.com/hmpsig1.png");
+  background-repeat: no-repeat;
+  background-size: 17%;
+  background-position: center center;
+  
+  -webkit-transform: skewY(-10deg);
+  -moz-transform: skewY(-10deg);
+  -ms-transform: skewY(-10deg);
+  -o-transform: skewY(-10deg);
+  transform: skewY(-10deg);
+}
+
+.leagueText{
+  text-align:center;
+  font-size: 28px;
+  color: WHITE;
+  font-weight: bold;
+}
+
+#right-p .leagueText{
+  float:left;
+}
+
+#left-p .leagueText{
+  float:right;
+}
+
+
+a{
+
+    text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
+//Show.erb
+
+$imagewidth: 1000px;
+
+.headerWrapper{
+  margin: 0 auto;
+  width: $imagewidth;
+  height:100%;
+  background-color:#0f8f2e;
+}
+
+.headerWrapperPacific{
+  @extend .headerWrapper;
+  background-color:#40b2e3;
+}
+  
+
+.headerInfo{
+  width: 100%;
+}
+
+.headerWrapper h1{
+    display: block;
+    height: 100px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+    display:inline-block !important;
+}
+
+
+.leageImageCentral{
+  background-image: url("http://p.npb.jp/img/cp_league/c_main_logo.gif");
+  background-repeat: no-repeat;
+  height:200px;
+  width:16%;
+  //filter: grayscale(100%); 
+  //opacity: 0.5;
+  margin-left:10px;
+  text-indent: -999px;
+}
+
+.leageImagePacific{
+  @extend .leageImageCentral;
+   background-image: url("http://p.npb.jp/img/cp_league/p_main_logo.gif");
+}
+
+#leagueAltBtn, #returnBtn{
+  float:right;
+}
+
+#teamWrapper{
+  padding: 20px 0;
+  height: 100%;
+  width:$imagewidth;
+  margin: 0 auto;
+   background-color: white;
+}
+
+.teamInfo{
+  border-bottom: 2px solid #e7e7e7;
+}
+
+.teamLocation{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.teamLocation span{
+  display: inline;
+}
+#arrowIcon{
+    color: #333333;
+    background: url(http://p.npb.jp/img/common/icon_link_arrow_black.png) 5px center no-repeat;
+    padding-left: 15px;
+}
+
+body{
+  background-color:  #f2f2f2 !important;
+}
+
+
+
+
+
+
+//teams #show
+
+$paddingvalue: 40px;
+
+#showTeamName{
+  display: inline-block;
+  vertical-align: middle;
+  font-size:20px;
+}
+
+#teamShowHeader{
+  vertical-align:middle;
+  text-align:center;
+  
+} 
+
+
+
+.sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+.sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+.sidebar-nav .navbar li {
+    float: none;
+    display: block;
+    background: #2e3a5c;
+    
+    label{
+      color: #777777 !important;
+      font-weight: normal !important;
+      padding-top: 12px;
+      padding-left: 16px;
+      padding-right: 10px;
+    }
+  }
+.sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#showTeamContext{
+  background-color: #f7f7f7;
+  padding-bottom: 300px;
+}
+
+
+//teams navbar
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #FF3547 !important;
+
+}
+
+.divBtnWraper{
+  text-align:center;
+  margin:auto;
+
+}
+
+#mapNavTitle{
+  font-weight: bold !important;
+}

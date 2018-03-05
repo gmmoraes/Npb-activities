@@ -1,0 +1,19 @@
+<section class="block">
+    <% @leagues.each do |league| %>
+        <a href="<%= league.name == 'Central League' ? '/leagues/1' : '/leagues/2'%>" id="<%= league.name == 'Central League' ? 'left-p' : 'right-p' %>">
+            <div> 
+                <div class="leagueTitle"></div> 
+                <div class="leageImage"></div> 
+            </div> 
+            <span class="leagueText"> <%= league.name == 'Central League' ? 'PICK YO' : 'UR LEAGUE' %> </span> 
+        </a> 
+    <% end %>   
+</section>
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@activities, :team_id) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+
+      <%= f.label :comments %>
+      <%= f.text_area :comments %>
+      
+
+      <%= f.label :team_id, "Confirmation" %>
+      <%= f.text_field :team_id, data: 
+  {autocomplete_source: @team.pluck(:id)} %>
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

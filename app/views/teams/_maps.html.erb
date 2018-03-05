@@ -1,0 +1,44 @@
+<div style='width: 800px;'>
+  <div id="multi_markers" style='width: 800px; height: 400px;'></div>
+</div>
+
+<% @team.activities.each do |activity| %>
+  <h1> <%=  activity.lat %> </h1>
+<% end %>
+
+
+<script type="text/javascript">  
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'multi_markers'}}, function(){
+  //markers = handler.addMarkers(<%=raw @collection.to_json %>);
+  var markers = handler.addMarkers([
+    { lat: <%= @team.lat %>, lng: <%= @team.long %>}
+  ]);
+  
+  var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+  var icons = {
+    parking: {
+      icon: iconBase + 'parking_lot_maps.png'
+      
+    }
+  };
+  <% @team.activities.each do |activity| %>
+    markers = handler.addMarkers([
+      { 
+        lat: <%=  activity.lat %> , lng: <%=  activity.long %> , 
+        "picture": {
+          "url": "http://maps.google.com/mapfiles/ms/micons/coffeehouse.png",
+          "width":  32,
+          "height": 32
+        },
+        "infowindow": "hello!"
+      }
+    ]);
+  <% end %>
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+  handler.getMap().setZoom(17);
+});
+</script>
+
+

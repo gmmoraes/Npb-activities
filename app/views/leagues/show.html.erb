@@ -1,0 +1,46 @@
+<header class="<%= @league.name == 'Central League' ? 'headerWrapper' : 'headerWrapperPacific' %>">
+  <div class="headerInfo">
+    <img  src="" class="<%= @league.name == 'Central League' ? 'leageImageCentral' : 'leageImagePacific' %>"></img>
+    <h1><%= @league.name %></h1>
+
+    <%= link_to(@league.name == 'Central League' ? "2" : '1',@leagues, id:@league.name == 'Central League' ? 'left-p' : 'right-p') do %>
+      <input type="image" src=<%= @league.name == 'Central League' ? 'http://p.npb.jp/img/common/logo/flag_pacific_s.gif' : 'http://p.npb.jp/img/common/logo/flag_central_s.gif' %> id="leagueAltBtn" >
+    <% end %>  
+
+    <%= link_to url_for(:leagues), class: "btn btn-default", id: "returnBtn" do %>
+      <span class="glyphicon glyphicon-home"></span> Home
+    <% end %>  
+  </div>
+  
+</header>
+
+<div id='teamWrapper'>
+  <% @league.teams.each do |team| %>
+   <%= link_to team  do %>
+    <div class="teamInfo">  
+      
+      <img src="<%= team.logo %>" alt="Smiley face" height="12%" width="12%">
+      <div class="teamLocation">
+        <h3><%= team.name %></h3>
+        <span>
+          <span id="arrowIcon"></span> 
+          <label>City:</label> 
+          <span><%= team.city %></span>
+        </span>
+        <span>
+          <span id="arrowIcon"></span> 
+          <label>Stadium:</label> 
+          <span><%= team.stadium %></span>
+        </span><br>
+        <span>
+          <span id="arrowIcon"></span> 
+          <label>Address:</label> 
+          <span><%= team.address %></span>
+        </span>
+      </div>
+
+    </div>
+   <% end %>
+    <br>
+  <% end %>
+</div>

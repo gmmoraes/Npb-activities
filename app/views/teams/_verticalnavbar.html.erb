@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-sm-3">
+    <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="visible-xs navbar-brand">Sidebar menu</span>
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#" id="mapNavTitle">Filter Map</a></li>
+            <li><label>Name</label><input type="text" name="activity_name" value=""></li>
+            <li><a href="#">Type</a></li>
+            <li><a href="#">Menu Item 4</a></li>
+            <li><a href="#">Highligh specifc area <span class="badge">1,118</span></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class='divBtnWraper'>
+      <button type="button" class="btn btn-primary">Filter</button><br>
+      <a href="">Would like to add an new activity?Click here</a>
+    </div>
+  </div>
+  <div class="col-sm-9" id="showTeamContext">
+    <%= render 'maps' %>
+  </div>
+</div>
+
+
+<%= link_to "Activity", url_for(action: 'new', controller: 'activities'), :team_id => @team.id %>
+
