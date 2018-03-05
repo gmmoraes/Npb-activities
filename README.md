@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To do:
 
-Things you may want to cover:
+* Make the website mobile friendly
 
-* Ruby version
+* Add the possibility of adding new activities
 
-* System dependencies
+* Crawl specific blogs with information about activities in Japan and add them to the database. 
 
-* Configuration
+* Put it online
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
